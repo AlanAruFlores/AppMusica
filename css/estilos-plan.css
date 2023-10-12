@@ -11,7 +11,7 @@
 .container-grid{
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 18vh 370vh 30vh;
+    grid-template-rows: 18vh 360vh 30vh;
     grid-template-areas: 
     "head head head head head head"
     "body body body body body body"
@@ -24,7 +24,7 @@
 }
 .plan-container{
     display: grid;
-    grid-template-rows: 55vh 90vh 225vh;
+    grid-template-rows: 55vh 90vh 215vh;
     height: 99%;
     width: inherit;
 }
@@ -140,7 +140,7 @@
     margin-top: 10px;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 1.8rem;
 }
 .planes_titulos{
     color:var(--naranja);
@@ -234,7 +234,123 @@
     color:#000a23;
 }
 
+@media (min-height:667px) {
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 340vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 90vh 205vh;
+        height: 99%;
+        width: inherit;
+    }
+}
 
+
+@media (min-height:780px) {
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 300vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 70vh 185vh;
+        height: 99%;
+        width: inherit;
+    }
+}
+
+@media (min-height:780px) {
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 290vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 60vh 185vh;
+        height: 99%;
+        width: inherit;
+    }
+}
+
+@media (min-height:850px) {
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 280vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 70vh 165vh;
+        height: 99%;
+        width: inherit;
+    }
+}
+
+
+@media (min-height:950px) {
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 260vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 70vh 145vh;
+        height: 99%;
+        width: inherit;
+    }
+}
+
+
+@media (min-height:1050px) {
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 240vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 50vh 145vh;
+        height: 99%;
+        width: inherit;
+    }
+}
+
+
+
+
+
+
+/*ANCHO*/
 @media (min-width: 800px) {
     .titulo{
         font-size: 2rem;
