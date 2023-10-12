@@ -14,19 +14,21 @@
 <body>
     <div id="contenedor-grid" class="container-grid">
         <header class="div div-header">
-            <h1>fakefy</h1>
-            <button id="botonmenu" class="menu-button"><i class="menu-icon fa-solid fa-bars"></i></button>
-            <button id="botonmenu2" class="menu-button"><i class="menu-icon fa-solid fa-bars"></i></button>
-
-        </header>
-        <nav id="menu-nav" class="div menu-navegacion nav1">
-            <ul>
-                <li><i class="fa-solid fa-house"></i>HOME</li>
-                <li><i class="fa-solid fa-star"></i>FAVORITO</li>
-                <li><i class="fa-solid fa-user"></i>PERFIL</li>
-            </ul>
-        </nav>
-
+            <nav class="nav nav-menu" id="nav">
+                <h1 class="nav_title">fakefy</h1>
+                <ul class="link_menu">
+                    <li><a href="#" class="nav_link">HOME</a></li>
+                    <li><a href="#" class="nav_link">FAVORITO</a></li>
+                    <li><a href="#" class="nav_link">PERFIL</a></li>
+                </ul>
+                <a href="#nav" class="nav__button nav_hamburguesa">
+                    <i class="fa-solid fa-bars" class="nav_icon"></i>
+                </a>
+                <a href="#" class="nav__button nav_cierre">
+                    <i class="fa-solid fa-xmark" class="nav_icon"></i>
+                </a>    
+            </nav>
+    </header>
         <div class="titulo_main">
             <h2 class="titulo"> ¡¡DISFRUTA AQUI DE NUESTRAS MEJORES MUSICAS!!</h2>
         </div>
@@ -161,7 +163,6 @@
             </div>
         </footer>
     </div>
-    <script src="script/menu.js"></script>
     <script src="script/audio.js"></script>
 </body>
 </html>

@@ -241,6 +241,7 @@ div{
 }
 
 @media (min-width:763px){
+
     .container-grid{
         display:grid;
         grid-template-columns: repeat(6, 1fr);
