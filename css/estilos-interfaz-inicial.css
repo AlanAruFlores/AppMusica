@@ -83,11 +83,13 @@ body{
     /*Nos sirve para realizar una animacion*/
     --estado-menu: translateY(-100%);
 
+    /*Control titulo*/
     --titulo-color: #f69100;
-
+    --position:static;
 
     display: grid;
     grid-template-columns: repeat(2, max-content);
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -97,16 +99,18 @@ body{
     --estado-cierre: scale(2,2);
     --estado-menu: translate(0);
     --titulo-color: #00001a;
+    --position:fixed;
 }
 
 .nav_title{
     z-index: 1;
     color:var(--titulo-color);
     transition: 1s;
+    position: var(--position);
 }
 
 .link_menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -114,7 +118,7 @@ body{
 
     padding: 0px;
     display: grid;
-    background-color: var(--naranja);
+    background-color: rgba(246, 144, 0, 0.867);
     grid-template-columns: 1fr;
     transform: var(--estado-menu);
     transition: 1s;
@@ -153,7 +157,6 @@ body{
     grid-column: 2/3;
     grid-row: 1/2;
     transition: 1s;
-
 }
 
 .nav_hamburguesa{
@@ -166,7 +169,6 @@ body{
     color: var(--azul);
 
 }
-
 
 
 /*
@@ -526,7 +528,8 @@ body{
     .link_menu{
         position: relative;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        padding: 10px;
         flex-direction: row;
         column-gap: 2.4rem;
         transform: var(--estado-menu);
