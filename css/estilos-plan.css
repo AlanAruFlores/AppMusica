@@ -1,0 +1,308 @@
+:root{
+    --fuente-serif:'Caudex', serif;
+    --fuente-sans:'Nanum Gothic', sans-serif;
+    --fuente-juego:'Pixelify Sans', cursive;
+    --naranja: #f69100;
+    --azul:#000a23;
+    --footer-azul:#00001a;
+
+}
+
+.container-grid{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 18vh 370vh 30vh;
+    grid-template-areas: 
+    "head head head head head head"
+    "body body body body body body"
+    "foot foot foot foot foot foot";
+}
+
+.div-main{
+    width: 100%;
+    padding: 0;
+}
+.plan-container{
+    display: grid;
+    grid-template-rows: 55vh 90vh 225vh;
+    height: 99%;
+    width: inherit;
+}
+.titulo{
+    color:#fff;
+    letter-spacing: 0.1rem;
+}
+/*Seccion de introduccion*/
+.planDiv{
+    display: flex;
+}
+
+.introduccion{
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    padding: 25px 10px 10px 10px;
+    background-color: var(--naranja);
+    grid-row:1/2;
+    font-family: var(--fuente-juego);
+}
+
+.introduccion_titulo{
+    color:#fff;
+    letter-spacing: 0.1rem;
+}
+.introduccion_parrafo{
+    color:#fff;
+    font-size: 20px;
+}
+.terminos{
+    font-size: 0.7rem;
+    color: #fff;
+    font-family: var(--fuente-juego);
+}
+.button{
+    margin-top: 40px;
+    background-color: #fff;
+    width: 100%;
+    padding:14px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--footer-azul);
+    color:var(--naranja);
+    border-radius: 0;
+    font-weight: bold;
+    transition:1s;
+}
+
+.button:hover{
+    background-color: #fff;
+    color:var(--footer-azul);
+    transition:1s;
+}
+
+
+/*Beneficios*/
+.beneficios{
+    background-color: var(--footer-azul);
+    font-family: var(--fuente-juego);
+    flex-direction: column;
+    align-items: start;
+    padding:10px;
+}
+
+.beneficios_titulo{
+    color:var(--naranja);
+}
+
+
+.grupo_beneficio{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.subtitulo_beneficio{
+    color:white;
+}
+.card_beneficio{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+    color:var(--naranja);
+}
+.beneficio_icon{
+    border: var(--naranja) 0.2rem solid;
+    border-radius: 2rem;
+    padding: 10px;
+}
+.beneficio_icono{
+    font-size: 3rem;
+}
+.beneficio_desc p{
+    font-size: 1rem;
+}
+.beneficio_desc{
+    font-size: 1.2rem;
+}
+
+
+/*Planes*/
+.grupo_planes
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.planes{
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.planes_titulos{
+    color:var(--naranja);
+    color:#fff;
+    font-family: var(--fuente-juego);
+}
+.plan_card{
+    width: 90%;
+    padding: 10px;
+    background-color: var(--footer-azul);
+}
+.subtitulo_plan{
+    font-size: 1.3rem;
+    font-family: var(--fuente-juego);
+    color:#fff;
+    margin-top: 10px;
+}
+
+.button-plan{
+    font-size: 0.9rem;
+    padding: 4px;
+    width:2%;
+    border-radius: 0;
+    text-align: start;
+    background-color: var(--naranja);
+    transition: 1s;
+    text-decoration: none;
+    font-family: var(--fuente-juego);
+    color:#fff;
+}
+
+.plan_parrafo{
+    color:#fff;
+    font-family: var(--fuente-juego);
+}
+.plan_list{
+    margin-top: 10px;
+    list-style-type: none;
+    line-height: 24px;
+    color:#fff;
+    font-family: var(--fuente-juego);
+    padding-left: 14px;
+}
+.icon-check{
+    color:var(--naranja);
+    
+}
+.icon-xmark{
+    color:#fc2a2a;
+}
+
+.plan_card .btn{
+    color:white;
+    background-color: #f69100;
+    width: 100%;
+    padding:14px;
+    text-align: center;
+    border-radius: 0;
+    font-weight: bold;
+    transition:1s;
+}
+
+.plan_card .btn:hover{
+    color:#f69100;
+    background-color: #fff;
+    width: 100%;
+    padding:14px;
+    text-align: center;
+    border-radius: 0;
+    font-weight: bold;
+    transition:1s;
+}
+.terminos{
+    margin-top: 10px;
+}
+
+.card_admin{
+    background-color: #f69100;
+}
+
+#btn_admin{
+    background-color: #fff;
+    color:#f69100;
+}
+#admin_plan{
+    background-color: white;
+    color: var(--naranja);
+}
+#btn_admin:hover{
+    background-color: #fff;
+    color:#000a23;
+}
+
+
+@media (min-width: 800px) {
+    .titulo{
+        font-size: 2rem;
+    }
+    
+    .introduccion_titulo{
+        font-size: 3rem;
+    }
+    .introduccion_parrafo{
+        font-size: 1.4rem;
+    }
+    .introduccion .terminos{
+        font-size: 0.85rem;
+    }
+    .introduccion .button{
+        border-radius: 0;
+
+    }
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 18vh 210vh 30vh;
+        grid-template-areas: 
+        "head head head head head head"
+        "body body body body body body"
+        "foot foot foot foot foot foot";
+    }
+    .plan-container{
+        display: grid;
+        grid-template-rows: 55vh 60vh 95vh;
+        height: 99%;
+        width: inherit;
+    }
+    .beneficios{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+    }
+    .grupo_beneficio{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-around;
+    }
+    .grupo_beneficio{
+        width: 100%;
+    }
+
+
+    /*Planes*/
+
+    .planes{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .grupo_planes
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+    }
+}
+
+.admin-icon{
+    color: var(--footer-azul);
+}

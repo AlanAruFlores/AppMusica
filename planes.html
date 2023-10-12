@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos-interfaz-inicial.css">
+    <link rel="stylesheet" href="css/estilos-plan.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&family=Nanum+Gothic&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="contenedor-grid" class="container-grid">
+        <header class="div div-header">
+            <nav class="nav nav-menu" id="nav">
+                <h1 class="nav_title">fakefy</h1>
+                <ul class="link_menu">
+                    <li style="color:white; border-color:white;"><a href="#" class="nav_link"> HOME</a></li>
+                    <li><a href="#" class="nav_link">FAVORITO</a></li>
+                    <li><a href="perfil.html" class="nav_link">PERFIL</a></li>
+                    <li><a href="index.html" class="nav_link">PLANES</a></li>
+                    <li><a href="index.html" class="nav_link">SOBRE NOSOTROS</a></li>
+                    <li><a href="index.html" class="nav_link">CERRAR SESION</a></li>
+                </ul>
+                <a href="#nav" class="nav__button nav_hamburguesa">
+                    <i class="fa-solid fa-bars" class="nav_icon"></i>
+                </a>
+                <a href="#" class="nav__button nav_cierre">
+                    <i class="fa-solid fa-xmark" class="nav_icon"></i>
+                </a>    
+            </nav>
+        </header>
+        <main class="div div-main">
+            <div class="plan-container">    
+                <div class="planDiv introduccion">
+                    <h3 class="titulo introduccion_titulo">OBTEN PREMIUM GRATIS POR 1 AÑO</h3>
+                    <p class="introduccion_parrafo">¡¡ SOLO cuesta $10000 al año !!</p>
+                    <a href="#" class="button button_introduccion">EMPEZAR</a>
+                    <p class="introduccion_parrafo terminos">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum natus sequi doloremque! Quod quas fuga doloribus, accusamus atque mollitia ratione laboriosam perspiciatis, maiores in ipsam magnam officia odio assumenda voluptatibus?
+                    </p>
+                </div>
+                <div class="planDiv beneficios">
+                    <h3 class="titulo beneficios_titulo">BENEFICIOS DE PREMIUM</h3>
+                    <div class="grupo_beneficio">
+                        <div class="card_beneficio">
+                            <div class="beneficio_icon">
+                                <i class="beneficio_icono fa-solid fa-download"></i>
+                            </div>
+                            <div class="beneficio_desc">
+                                <h4 class="subtitulo subtitulo_beneficio" >Descarga tu musica ! !</h4>
+                                <p>Escuchala cuando quieras !!</p>
+                            </div>
+                        </div>
+                        <div class="card_beneficio">
+                            <div class="beneficio_icon">
+                                <i class="beneficio_icono fa-solid fa-rectangle-ad"></i>
+                            </div>
+                            <div class="beneficio_desc">
+                                <h4 class="subtitulo subtitulo_beneficio">Escucha Musica sin anuncios ! !</h4>
+                                <p>Escuchala cuando quieras !!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grupo_beneficio">
+                        <div class="card_beneficio">
+                            <div class="beneficio_icon">
+                                <i class="beneficio_icono fa-solid fa-music"></i>
+                            </div>
+                            <div class="beneficio_desc">
+                                <h4 class="subtitulo subtitulo_beneficio" >Escucha la cancion que quieras ! !</h4>
+                                <p>Escuchala cuando quieras !!</p>
+                            </div>
+                        </div>
+                        <div class="card_beneficio">
+                            <div class="beneficio_icon">
+                                <i class=" beneficio_icono fa-solid fa-list"></i>                        
+                            </div>
+                            <div class="beneficio_desc">
+                                <h4 class="subtitulo subtitulo_beneficio"> Crear varias listas ! ! </h4>
+                                <p>Escuchala cuando quieras !!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="planDiv planes">
+                    <h2 class="titulo planes_titulos">ELIGE TU PLAN ! !</h2>
+                    <div class="grupo_planes">
+                        <div class="plan_card">
+                            <div>
+                                <a class="button-plan">1 mes gratis al suscribirte</a>
+                            </div>
+                            <h6 class="subtitulo_plan">Noob</h6>
+                            <hr>        
+                            <p class="plan_parrafo" style="font-weight: bold; text-align: center;">SOLO A $2000 </p>
+                            <p class="plan_parrafo">Con este plan podras: </p>
+                            <ul class="plan_list">
+                                <li><i class="icon-check fa-solid fa-check"></i> Descargar anuncios</li>
+                                <li><i class="icon-xmark fa-solid fa-xmark"></i> Mirar sin anuncios</li>
+                                <li><i class="icon-check fa-solid fa-check"></i> Escuchar la cancion que quieras</li>
+                                <li><i class="icon-xmark fa-solid fa-xmark"></i> Crear varias listas de reproduccion</li>
+                            </ul>
+                            <button class="btn">EMPEZAR</button>
+                            <p class="terminos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias aliquam aspernatur similique molestias non, quam impedit voluptates aliquid commodi dignissimos!</p>
+                        </div>
+    
+                        <div class="plan_card">
+                            <div>
+                                <a class="button-plan">4 meses gratis al suscribirte</a>
+                            </div>
+                            <h6 class="subtitulo_plan">Pro</h6>
+                            <hr>
+                            <p class="plan_parrafo" style="font-weight: bold; text-align: center;">SOLO A $4000 </p>
+                            <p class="plan_parrafo">Con este plan podras: </p>
+                            <ul class="plan_list">
+                                <li><i class="icon-check fa-solid fa-check"></i> Descargar anuncios</li>
+                                <li><i class="icon-check fa-solid fa-check"></i> Mirar sin anuncios</li>
+                                <li><i class="icon-check fa-solid fa-check"></i> Escuchar la cancion que quieras</li>
+                                <li><i class="icon-xmark fa-solid fa-xmark"></i> Crear varias listas de reproduccion</li>
+                            </ul>
+                            <button class="btn">EMPEZAR</button>
+                            <p class="terminos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias aliquam aspernatur similique molestias non, quam impedit voluptates aliquid commodi dignissimos!</p>
+                        </div>
+    
+                        <div class="plan_card card_admin">
+                            <div>
+                                <a id="admin_plan" class="button-plan">1 año gratis al suscribirte</a>
+                            </div>
+                            <h6 class="subtitulo_plan">Admin</h6>
+                            <hr>
+                            <p class="plan_parrafo" style="font-weight: bold; text-align: center;">SOLO A $10000 </p>
+                            <p class="plan_parrafo">Con este plan podras: </p>
+                            <ul class="plan_list">
+                                <li><i class="admin-icon icon-check fa-solid fa-check"></i> Descargar anuncios</li>
+                                <li><i class="admin-icon icon-check fa-solid fa-check"></i> Mirar sin anuncios</li>
+                                <li><i class="admin-icon icon-check fa-solid fa-check"></i> Escuchar la cancion que quieras</li>
+                                <li><i class="admin-icon icon-check fa-solid fa-check"></i> Crear varias listas de reproduccion</li>
+                            </ul>
+                            <button id="btn_admin" class="btn">EMPEZAR</button>
+                            <p class="terminos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias aliquam aspernatur similique molestias non, quam impedit voluptates aliquid commodi dignissimos!</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </main>
+        <footer class="div div-footer">
+            <div class="footer-div">
+                <h1>fakefy</h1>
+                <div class="footer-info">
+                    <p><i class="icon fa-solid fa-phone"></i> +11 5384 2323</p>
+                    <p><i class="icon fa-solid fa-envelope"></i> fakefy@gmail.com</p>
+                    <p><i class="icon fa-solid fa-location-dot"></i> Palermo 4423</p>
+                </div>
+            </div>
+            <div class="footer-div">
+                <h2 class="titulo-footer">Redes Sociales</h2>
+                <p class="redes-sociales"> 
+                    <i class="icon fa-brands fa-facebook"></i>&nbsp &nbsp
+                    <i class="icon fa-brands fa-twitter"></i>&nbsp &nbsp
+                    <i class="icon fa-brands fa-instagram"></i>&nbsp &nbsp
+                    <i class="icon fa-brands fa-whatsapp"></i>&nbsp &nbsp
+                </p>
+                <br>
+                <h2 class="legal titulo-footer">Legal</h2>
+                <ul class="legal legal-links">
+                    <li>   
+                         <a href="#">Terminos</a>
+                    </li>
+                    <li>   
+                        <a href="#">Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-div legal-div">
+                <h2 class="titulo-footer">Legal</h2>
+                <ul class=" legal-links">
+                    <li>   
+                         <a href="#">Terminos</a>
+                    </li>
+                    <li>   
+                        <a href="#">Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="script/audio.js"></script>
+</body>
+</html>

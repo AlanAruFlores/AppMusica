@@ -512,7 +512,7 @@ body{
 }
 
 
-@media (min-width: 780px) {
+@media (min-width: 1006px) {
     .container-grid{
         grid-template-rows: 18vh 10vh 80vh 30vh;
     }
@@ -528,10 +528,10 @@ body{
     .link_menu{
         position: relative;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         padding: 10px;
         flex-direction: row;
-        column-gap: 2.4rem;
+        column-gap: 1rem;
         transform: var(--estado-menu);
         background-color: var(--azul);
     }
@@ -539,6 +539,7 @@ body{
         justify-content: start;
         color:var(--naranja);
         border-bottom: #f69100 solid 2px;
+        font-size: 1rem;
     }    
 
     .link_menu li:hover{
