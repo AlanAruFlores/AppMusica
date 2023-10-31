@@ -26,12 +26,12 @@
                     --&nbsp;ElSobrado,  2023
                 </h2>
             </div>
-            <form action="">
+            <form id="form">
                 <input id="usuario" class="text" placeholder="USUARIO">
-                <label for="usuario">NOMBRE USUARIO</label>
+                <label id="label_usuario" for="usuario">NOMBRE USUARIO</label>
                 <input id="contrasenia" type="password">
-                <label for="contrasenia">CONTRASEÑA</label>
-                <button class="login-button">  <a class="button_link" href="interfaz-inicial.html">LOGIN</a></button>
+                <label id="label_contrasenia" for="contrasenia">CONTRASEÑA</label>
+                <button id="boton-login" class="login-button"><a class="button_link" href="#form">LOGIN</a></button>
                 <label class="registro-text">No tienes una cuenta?. <a class="link-registro" href="registro.html">Registrala aca</a></label>
             </form>
         </main>
@@ -77,5 +77,6 @@
             </div>
         </footer>
     </div>
+    <script src="script/login.js" type="module"></script>
 </body>
 </html>

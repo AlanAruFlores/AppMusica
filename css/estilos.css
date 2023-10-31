@@ -88,7 +88,8 @@ div{
 /*FORMULARIO*/
 .div-main form{
     padding: 10pt;
-    width: 24rem;
+    /*width: 24rem;*/
+    width: 98%;
     height: 80vh;
     background-color: #f69100;
     box-shadow: 3px 10px 10px 10px  #000207;

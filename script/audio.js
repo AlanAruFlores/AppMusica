@@ -1,28 +1,3 @@
-
-/*
-var audio_have_ever_seen[]  = new Audio("/audio/have-you-ever-seen-the-rain.mp3");
-var button_audio_have_ever_seen =  document.getElementById("button-have-ever-seen");
-var button_pause_audio_have_ever_seen =  document.getElementById("button-pause-have-ever-seen");
-
-button_audio_have_ever_seen.style.display ="block";
-button_pause_audio_have_ever_seen.style.display = "none";
-
-button_audio_have_ever_seen.addEventListener("click", ()=>{
-        audio_have_ever_seen.play();
-        button_audio_have_ever_seen.style.display ="none";
-        button_pause_audio_have_ever_seen.style.display = "block";
-});
-
-
-button_pause_audio_have_ever_seen.addEventListener("click", ()=>{
-    audio_have_ever_seen.pause();
-    button_audio_have_ever_seen.style.display ="block";
-    button_pause_audio_have_ever_seen.style.display = "none";
-
-});
-
-*/
-
 let audios= [
     new Audio("/audio/have-you-ever-seen-the-rain.mp3"),
     new Audio("/audio/genesis-mama-lyrics.mp3"),
@@ -74,3 +49,4 @@ for(let i = 0 ; i < 8; i++){
         button.style.display="block";
     });
 }
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilos-interfaz-inicial.css">
+    <link rel="stylesheet" href="css/interfaz2.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,30 @@
 </head>
 <body>
     <div id="contenedor-grid" class="container-grid">
-        <header class="div div-header header-uno">
+        <header class="div div-header">
             <nav class="nav nav-menu" id="nav">
-                <h1 class="nav_title">fakefy</h1>
-                <ul class="link_menu">
+                <div class="nav_inicio">
+                    <h1 class="nav_title">fakefy</h1>
+                    <ul class="inicio_menu">
+                        <li style="color:white; border-color:white;"><a href="#" class="nav_link"> 
+                            HOME</a></li>
+                        <li><a href="#" class="nav_link">BUSCAR</a></li>
+                    </ul>
+                </div>
+                <ul class="link_menu_uno">
                     <li style="color:white; border-color:white;"><a href="#" class="nav_link"> HOME</a></li>
                     <li><a href="#" class="nav_link">FAVORITO</a></li>
                     <li><a href="perfil.html" class="nav_link">PERFIL</a></li>
                     <li><a href="planes.html" class="nav_link">PLANES</a></li>
                     <li><a href="index.html" class="nav_link">SOBRE NOSOTROS</a></li>
                     <li><a href="index.html" class="nav_link">CERRAR SESION</a></li>
+                </ul> 
+                <ul class="link_menu_dos">
+                    <li><a href="#" class="nav_link">FAVORITO</a></li>
+                    <li><a href="perfil.html" class="nav_link">PERFIL</a></li>
+                    <li><a href="planes.html" class="nav_link">PLANES</a></li>
+                    <li><a href="index.html" class="nav_link">SOBRE NOSOTROS</a></li>
+                    <li><a href="index.html" class="nav_link" id="cerrar_sesion">CERRAR SESION</a></li>
                 </ul>
                 <a href="#nav" class="nav__button nav_hamburguesa">
                     <i class="fa-solid fa-bars" class="nav_icon"></i>
@@ -32,40 +46,7 @@
                 </a>    
             </nav>
     </header>
-
-<!--Header para computadora-->
-    <header class="div div-header header-dos" id="header-dos" >
-        <nav class="nav nav-menu nav-dos" id="nav-dos">
-            <h1 class="nav_title">fakefy</h1>
-            <ul class="link_menu">
-                <li style="color:white; border-color:white;"><a href="#" class="nav_link"> HOME</a></li>
-                <li><a href="planes.html" class="nav_link">PLANES</a></li>
-                <li><a href="index.html" class="nav_link">SOBRE NOSOTROS</a></li>
-
-                <li class="link_perfil">
-                    <a class=" perfil_boton" href="#header-dos">
-                        <i class="fa-solid fa-user perfil_icono" style="color:#f69100"></i>   
-                     </a>
-                    <a class=" perfil_cancel" href="#">
-                        <i class="fa-solid fa-user perfil_icono" style="color:#fff;"></i>   
-                    </a>
-                </li>
-                
-
-            </ul>
-
-        </nav>
-        <div class="perfil_box">
-            <li><a href="perfil.html" class="nav_link">PERFIL</a></li>
-            <li><a href="#" class="nav_link">FAVORITO</a></li>
-            <li><a href="index.html" class="nav_link cerrar_sesion">CERRAR SESION</a></li>
-        </div>
-    </header>
-    
-
-    
-    
-    <div class="titulo_main">
+        <div class="titulo_main">
             <h2 class="titulo"> ¡¡DISFRUTA AQUI DE NUESTRAS MEJORES MUSICAS!!</h2>
         </div>
         <main class="div div-main">
@@ -200,5 +181,6 @@
         </footer>
     </div>
     <script src="script/audio.js"></script>
+    <script src="script/cerrarSesion.js"></script>
 </body>
 </html>

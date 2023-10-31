@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilos-interfaz-inicial.css">
+
+    <link rel="stylesheet" href="css/interfaz2.css">
     <link rel="stylesheet" href="css/estilos-perfil.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,15 +15,29 @@
 
 </head>
 <body>
-    <div id="contenedor-grid" class="container-grid">
+    <div class="container-grid">
         <header class="div div-header">
             <nav class="nav nav-menu" id="nav">
-                <h1 class="nav_title">fakefy</h1>
-                <ul class="link_menu">
-                    <li><a href="interfaz-inicial.html" class="nav_link">HOME</a></li>
+                <div class="nav_inicio">
+                    <h1 class="nav_title">fakefy</h1>
+                    <ul class="inicio_menu">
+                        <li><a href="interaz2.html" class="nav_link"> 
+                            HOME</a></li>
+                        <li><a href="#" class="nav_link">BUSCAR</a></li>
+                    </ul>
+                </div>
+                <ul class="link_menu_uno">
+                    <li><a href="#" class="nav_link"> HOME</a></li>
                     <li><a href="#" class="nav_link">FAVORITO</a></li>
-                    <li style="color:white; border-color: white;"><a href="#" class="nav_link">PERFIL</a></li>
-                    <li><a href="index.html" class="nav_link">PLANES</a></li>
+                    <li><a href="perfil.html" class="nav_link">PERFIL</a></li>
+                    <li><a href="planes.html" class="nav_link">PLANES</a></li>
+                    <li><a href="index.html" class="nav_link">SOBRE NOSOTROS</a></li>
+                    <li><a href="index.html" class="nav_link">CERRAR SESION</a></li>
+                </ul> 
+                <ul class="link_menu_dos">
+                    <li><a href="#" class="nav_link">FAVORITO</a></li>
+                    <li style="color:white; border-color:white;"><a href="perfil.html" class="nav_link">PERFIL</a></li>
+                    <li ><a href="planes.html" class="nav_link">PLANES</a></li>
                     <li><a href="index.html" class="nav_link">SOBRE NOSOTROS</a></li>
                     <li><a href="index.html" class="nav_link">CERRAR SESION</a></li>
                 </ul>
@@ -33,10 +48,8 @@
                     <i class="fa-solid fa-xmark" class="nav_icon"></i>
                 </a>    
             </nav>
-    </header>
-        <div class="titulo_main">
-            <h2 class="titulo">PERFIL DEL USUARIO</h2>
-        </div>
+        </header>
+
         <main class="div div-main">
             <div class=" perfil_container">      
                 <div class="perfilDiv foto_perfil">
@@ -56,7 +69,6 @@
                 <div class="perfilDiv botones_perfil">
                     <a href="interfaz-inicial.html" class="button btn-actualizar">Actualizar</a>
                     <a href="index.html" class="button btn-eliminar">Eliminar</a>
-
                 </div>
             </div>
         </main>

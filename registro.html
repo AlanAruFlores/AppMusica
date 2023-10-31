@@ -26,17 +26,16 @@
                     --&nbsp;ElSobrado,  2023
                 </h2>
             </div>
-            <form>
-                <input id="usuario" class="text" placeholder="USUARIO">
-                <label for="usuario">NOMBRE USUARIO</label>
-                <input id="contrasenia" type="password">
-                <label for="contrasenia">CONTRASEÑA</label>
-                <input id="fecha" type="date" style="color:white">
-                <label for="fecha">FECHA DE NACIMIENTO</label>
-                <input id="mail" type="email" placeholder="example@gmail.com">
-                <label for="mail">CORREO ELECTRONICO</label>
-                <button class="login-button">  <a class="button_link" href="index.html">REGISTRAR</a></button>
-
+            <form id="formulario-registro">
+                <input id="usuario" class="text" placeholder="USUARIO" name="usuario">
+                <label id="label_usuario" for="usuario">NOMBRE USUARIO</label>
+                <input id="contrasenia" type="password" name="contrasenia">
+                <label id = "label_contrasenia" for="contrasenia">CONTRASEÑA</label>
+                <input id="fecha" type="date" style="color:white" name="fecha">
+                <label id = "label_fecha" for="fecha">FECHA DE NACIMIENTO</label>
+                <input id="mail" type="email" placeholder="example@gmail.com" name="mail">
+                <label id = "label_mail" for="mail">CORREO ELECTRONICO</label>
+                <button class="login-button-desactivado" id="boton-registro"><a href="#formulario-registro" class="button_link">REGISTRAR</a></button>
             </form>
         </main>
         <footer class="div div-footer">
@@ -81,5 +80,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="script/register.js" type="module"></script>
 </body>
 </html>
