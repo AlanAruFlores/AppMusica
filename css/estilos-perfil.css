@@ -30,19 +30,24 @@
 
 }
 
-
+#main-desktop-profile{
+    display: none;
+}
+#main-mobile-profile{
+    display: flex;
+}
 .div-main{
+    display: flex;
     justify-content: center;
 }
-
+ 
 .perfil_container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows: 60vh 60vh 10vh; 
+    grid-template-rows: 60vh 40vh 10vh; 
        
     /*background-color: rgba(246, 144, 0, 0.867);*/
     background-color: var(--naranja);
-
     width: 90%;
     padding:0px ;
     box-shadow: 3px 10px 10px 10px  #000207;
@@ -54,9 +59,12 @@
 /*Estilos del perfil*/
 .perfilDiv{
     display: flex;
+
 }
 .foto_perfil{
     width: 100%;
+    grid-row: 1/2;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -77,6 +85,7 @@
 /*Inputs*/
 
 .info_perfil{
+    grid-row: 2/3;
     flex-direction: column;
     justify-content: center;
 }
@@ -97,6 +106,7 @@ input{
 
 
 .botones_perfil{
+    grid-row: 3/4;
     margin-top: 24px;
     flex-direction: row;
     justify-content: space-around;
@@ -150,7 +160,7 @@ input{
     .perfil_container{
         display: grid;
         grid-template-columns: repeat(7,1fr);
-        grid-template-rows: repeat(6,20vh); 
+        grid-template-rows: repeat(6,10vh); 
         width: 90%;
         padding: 10px;
         gap: 10px;
@@ -158,7 +168,7 @@ input{
     
     .foto_perfil{
         grid-column: 1/5;
-        grid-row: 1/6;
+        grid-row: 1/5;
     }
     .info_perfil{
         grid-column: 5/8;
@@ -205,15 +215,69 @@ input{
 
 
 @media(min-width:1000px){
-    .perfil_container{
-        display: grid;
-        grid-template-columns: repeat(8,1fr);
-        grid-template-rows: repeat(6,10vh); 
-        width: 90%;
-        padding: 10px;
-        gap: 10px;
+    .container-grid{
+        display:grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 18vh 40vh 30vh;
+        grid-template-areas: 
+        "head head body body body body body body"
+        "head head body body body body body body"
+        "head head body body body body body body"
+        "head head foot foot foot foot foot foot";
     }
 
+    #main-desktop-profile{
+        display: grid;
+    }
+    #main-mobile-profile{
+        display: none;
+    }
+
+    .div-main{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 10vh 80vh;
+        grid-template-areas: "mainNav" "mainPerfil";
+        background-color: var(--azul);
+        row-gap: 14px;
+        padding: 0;
+
+    }
+
+    .perfil_container{
+        grid-area: mainPerfil;
+        font-family: var(--fuente-juego);
+    }
+
+    .foto_perfil{
+        grid-column: 1/5;
+        grid-row: 1/5;
+    }
+    .info_perfil{
+        grid-column: 5/8;
+        grid-row: 1/6;
+    }
+    .botones_perfil{
+        grid-column: 1/8;
+        grid-row: 6/8;
+    }
+
+    .main_nav{
+        grid-area: mainNav;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 5fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--naranja);
+        border-radius: 0.4rem;
+        padding: 0rem 1rem;
+
+    }
+    
     .button{
         width: 140px;
         height: 50px;
@@ -259,16 +323,7 @@ input{
         padding:0;
     }
 
-    .container-grid{
-        display:grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 18vh 40vh 30vh;
-        grid-template-areas: 
-        "head head body body body body body body"
-        "head head body body body body body body"
-        "head head body body body body body body"
-        "head head foot foot foot foot foot foot";
-    }
+
     
     .div-header{
         border: none;

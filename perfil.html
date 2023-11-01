@@ -50,8 +50,46 @@
             </nav>
         </header>
 
-        <main class="div div-main">
-            <div class=" perfil_container">      
+    <!--INTERFAZ DESKTOP-->
+    <main class="div div-main" id="main-desktop-profile">
+        <div class="main_nav">
+            <div class="nav-main-frase">
+                Fakefy
+            </div>
+            <div class="nav-main-usuario">
+                <p id="nombre_usuario">Usuario</p>
+                <a class="logout" href="index.html"id="cerrar_sesion">Cerrar Sesion</a>
+            </div>
+            <div class="nav-main-perfil">
+                <img class="foto_perfil" src="img/perfil_foto.jpg" alt="foto">
+            </div>
+        </div> 
+        <div class="perfil_container">
+      
+            <div class="perfilDiv foto_perfil">
+                <h6 class="nombre_usuario">Alan</h6>
+                <img src="img/perfil.png" alt="foto">
+            </div>
+            <div class="perfilDiv info_perfil">
+                <input id="usuario" type="text" placeholder="USUARIO">
+                <label for="usuario">NOMBRE USUARIO</label>
+                <input id="usuario" type="password" placeholder="CONTRASEÑA">
+                <label for="usuario">CONTRASEÑA</label>
+                <input id="usuario" type="mail" placeholder="USUARIO">
+                <label for="usuario">CORREO ELECTRONICO</label>
+                <input id="usuario" type="date" placeholder="USUARIO">
+                <label for="usuario">FECHA NACIMIENTO</label>
+            </div>
+            <div class="perfilDiv botones_perfil">
+                <a href="interfaz-inicial.html" class="button btn-actualizar">Actualizar</a>
+                <a href="index.html" class="button btn-eliminar">Eliminar</a>
+            </div>
+        </div>
+    </main>
+
+    <!--INTERFAZ MOBILE-->
+        <main class="div div-main" id="main-mobile-profile">
+            <div class="perfil_container">      
                 <div class="perfilDiv foto_perfil">
                     <h6 class="nombre_usuario">Alan</h6>
                     <img src="img/perfil.png" alt="foto">
