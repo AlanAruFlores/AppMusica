@@ -103,7 +103,6 @@ body{
     z-index: 1;
     color:var(--titulo-color);
     transition: 1s;
-    position: var(--position);
     letter-spacing: 2.5px;
     font-size: 2.4rem;
 }
@@ -170,6 +169,14 @@ body{
 }
 
 /*MAIN*/
+/*Cambio la vista del main para mobile*/
+#main-mobile{
+    display: flex;
+}
+       
+#main-desktop{
+    display: none;
+}
 .div-main{
     display: flex;
     flex-direction: row;
@@ -339,74 +346,7 @@ body{
     color:var(--naranja);
     font-size: 20px;
 }
-/*FORMULARIO*/
-.div-main form{
-    padding: 10pt;
-    width: 24rem;
-    height: 80vh;
-    background-color: #f69100;
-    box-shadow: 3px 10px 10px 10px  #000207;
-}
 
-.div-main input{
-    display: block;
-    height: 10vh;
-    margin-top: 20px;
-    width: 98%;
-    font-size: 14px;
-    border: aliceblue solid 2px;
-    color:white;
-}
-
-.div-main input::placeholder{
-    color:white;
-    padding:2px;
-    font-family: var(--fuente-juego);
-}
-
-.div-main label{
-    display: block;
-    margin-top: 10px;
-    background-color: inherit;
-    font-family: var(--fuente-juego);
-    color:#e1e6f5;
-}
-
-.div-main button{
-   margin-top: 20px;
-   width: 98%;
-   padding: 14px 20px;
-   border: none;
-   font-family: var(--fuente-juego);
-   color:#f69100
-}
-
-.login-button{
-    transition: 1s;
-}
-.login-button:hover{
-    background-color: white;
-    color:var(--naranja);
-    transition: 1s;
-    cursor: pointer;
-}
-
-.registro-text{
-    font-size: 16px;
-}
-
-.link-registro:hover{
-    color:white;
-    transition: 1s;
-}
-
-.link-registro{
-    background-color: var(--naranja);
-    color: var(--azul);
-    font-weight: bold;
-    transition: 1s;
-
-}
 /*FOOTER*/
 .div-footer{
     display: flex;
@@ -528,7 +468,7 @@ body{
     .container-grid{
         display:grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 18vh 40vh 30vh;
+        grid-template-rows: 18vh 60vh 30vh;
         grid-template-areas: 
         "head head body body body body body body"
         "head head body body body body body body"
@@ -543,6 +483,7 @@ body{
         justify-content: start;
         align-items: start;
         background-color: var(--footer-azul);
+
     }
 
 
@@ -555,7 +496,7 @@ body{
     .nav{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        grid-template-rows: 20vh 94vh;
+        grid-template-rows: 24vh 114vh;
         grid-template-areas: "navone" 
             "navtwo";
         color:var(--naranja);
@@ -569,8 +510,9 @@ body{
         align-items: start;
         grid-area: navone;
         border-radius: 10px;
-        padding: 4px 10px;
+        padding: 10px 10px;
         background-color: var(--azul);
+        height: 100%;
     }
     .inicio_menu li{
         margin-top: 10px;
@@ -607,9 +549,106 @@ body{
 
 
 
-    .div-main{
-        background-color: var(--azul);
+
+    /*Cambio la vista del main para desktop*/
+    #main-mobile{
+        display: none;
     }
+       
+    #main-desktop{
+        display: grid;
+        width: 100%;
+    }
+
+    .div-main{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 10vh 5vh 70vh;
+        grid-template-areas: "mainNav" "mainTitulo" "mainCards";
+        background-color: var(--azul);
+        row-gap: 14px;
+        padding: 0;
+
+    }
+
+
+    .main_nav{
+        grid-area: mainNav;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 5fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--naranja);
+        border-radius: 0.4rem;
+        padding: 0rem 1rem;
+
+    }
+    .nav-main-frase{
+        grid-column: 1/2;
+        font-family: var(--fuente-juego);
+        color:whitesmoke;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    .nav-main-usuario{
+        grid-column: 2/3;
+        font-family: var(--fuente-juego);
+    }
+    #nombre_usuario{
+        font-size: 1.7rem;
+    }
+    .logout{
+        text-decoration: none;
+        background-color: var(--footer-azul);
+        padding: 4px;
+        color:var(--naranja);
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        transition: 1s;
+    }
+    .logout:hover{
+        background-color: whitesmoke;
+        color:var(--naranja);
+        transition: 1s;
+    }
+    .nav-main-perfil{
+        grid-column: 3/4;
+        display: flex;
+        justify-content: center;
+    }
+    .foto_perfil{
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 2rem;
+    }
+
+  
+    .main_title{
+        grid-area: mainTitulo;
+        display: flex;
+        justify-content: center;
+
+    }
+    .main_cards{
+        grid-area: mainCards;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    .titulo_dos{
+        font-family: var(--fuente-juego);
+        color: #f69100;
+     }
+
+
     .titulo_main{
         display: none;
     }
