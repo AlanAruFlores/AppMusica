@@ -12,41 +12,45 @@ let audios= [
 
 
 let buttons_play = [
-    document.getElementById("button-have-ever-seen1"),
-    document.getElementById("button-have-ever-seen2"),
-    document.getElementById("button-have-ever-seen3"),
-    document.getElementById("button-have-ever-seen4"),
-    document.getElementById("button-have-ever-seen5"),
-    document.getElementById("button-have-ever-seen6"),
-    document.getElementById("button-have-ever-seen7"),
-    document.getElementById("button-have-ever-seen8")
+    document.querySelectorAll("#button-have-ever-seen1"),
+    document.querySelectorAll("#button-have-ever-seen2"),
+    document.querySelectorAll("#button-have-ever-seen3"),
+    document.querySelectorAll("#button-have-ever-seen4"),
+    document.querySelectorAll("#button-have-ever-seen5"),
+    document.querySelectorAll("#button-have-ever-seen6"),
+    document.querySelectorAll("#button-have-ever-seen7"),
+    document.querySelectorAll("#button-have-ever-seen8")
 ];
 let buttons_pause = [
-    document.getElementById("button-pause-have-ever-seen1"),
-    document.getElementById("button-pause-have-ever-seen2"),
-    document.getElementById("button-pause-have-ever-seen3"),
-    document.getElementById("button-pause-have-ever-seen4"),
-    document.getElementById("button-pause-have-ever-seen5"),
-    document.getElementById("button-pause-have-ever-seen6"),
-    document.getElementById("button-pause-have-ever-seen7"),
-    document.getElementById("button-pause-have-ever-seen8")
+    document.querySelectorAll("#button-pause-have-ever-seen1"),
+    document.querySelectorAll("#button-pause-have-ever-seen2"),
+    document.querySelectorAll("#button-pause-have-ever-seen3"),
+    document.querySelectorAll("#button-pause-have-ever-seen4"),
+    document.querySelectorAll("#button-pause-have-ever-seen5"),
+    document.querySelectorAll("#button-pause-have-ever-seen6"),
+    document.querySelectorAll("#button-pause-have-ever-seen7"),
+    document.querySelectorAll("#button-pause-have-ever-seen8")
 
 ];
 
-for(let i = 0 ; i < 8; i++){
-    let button = buttons_play[i];
-    let button_pause = buttons_pause[i];
+console.log(buttons_play[0]);
+for(let j = 0 ; j<2; j++ ){
+    for(let i = 0 ; i < 8; i++){
+        let button = buttons_play[i];
+        let button_pause = buttons_pause[i];
+        
+        button[j].addEventListener("click", ()=>{
+            audios[i].play();
+            button_pause[j].style.display="block";
+            button[j].style.display="none";
+        });
     
-    button.addEventListener("click", ()=>{
-        audios[i].play();
-        button_pause.style.display="block";
-        button.style.display="none";
-    });
-
-    button_pause.addEventListener("click",()=>{
-        audios[i].pause();
-        button_pause.style.display="none";
-        button.style.display="block";
-    });
+        button_pause[j].addEventListener("click",()=>{
+            audios[i].pause();
+            button_pause[j].style.display="none";
+            button[j].style.display="block";
+        });
+    }
 }
+
 

@@ -22,49 +22,42 @@
 
 }
 .titulo{
-    background-color:rgba(246, 144, 0, 0.867);
+    background-color: #f69100;
     color: var(--footer-azul);
     padding: 10px;
-    width: 90%;
     box-shadow: 3px 10px 10px 10px  #000207;
-
-}
-
-#main-desktop-profile{
-    display: none;
-}
-#main-mobile-profile{
-    display: flex;
+    font-family: var(--fuente-juego);
+    font-size: 2rem;
+    width: 100%;
 }
 .div-main{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
- 
+
 .perfil_container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows: 60vh 40vh 10vh; 
+    grid-template-rows: 60vh 60vh 10vh; 
        
     /*background-color: rgba(246, 144, 0, 0.867);*/
     background-color: var(--naranja);
-    width: 90%;
+
+    width: 100%;
     padding:0px ;
     box-shadow: 3px 10px 10px 10px  #000207;
-
-
+    margin-top: 24px;
 }
 
 
 /*Estilos del perfil*/
 .perfilDiv{
     display: flex;
-
 }
 .foto_perfil{
     width: 100%;
-    grid-row: 1/2;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -85,14 +78,16 @@
 /*Inputs*/
 
 .info_perfil{
-    grid-row: 2/3;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    row-gap: 10px;
+    padding:10px;
+
 }
 
 input::placeholder{
     color:white;
-    padding:2px;
     font-family: var(--fuente-juego);
 }
 
@@ -101,12 +96,16 @@ input{
     border: aliceblue solid 2px;
     color:white;
     background-color: var(--footer-azul);
+    font-family: var(--fuente-juego);
+    height: 4rem;
+    font-size: 20px;
+    width: 90%;
 }
-
-
-
+label{
+    color: whitesmoke;
+    font-family: var(--fuente-juego);
+}
 .botones_perfil{
-    grid-row: 3/4;
     margin-top: 24px;
     flex-direction: row;
     justify-content: space-around;
@@ -144,6 +143,12 @@ input{
     transition: 1s;
 }
 
+#main-desktop-profile{
+    display: none;
+}
+#main-mobile-profile{
+    display: block;
+}
 @media (min-width: 600px){
     .foto_perfil img{
         width:75%;
@@ -161,7 +166,7 @@ input{
         display: grid;
         grid-template-columns: repeat(7,1fr);
         grid-template-rows: repeat(6,10vh); 
-        width: 90%;
+        width: 100%;
         padding: 10px;
         gap: 10px;
     }
@@ -214,212 +219,217 @@ input{
 
 
 
-@media(min-width:1000px){
-    .container-grid{
-        display:grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 18vh 40vh 30vh;
-        grid-template-areas: 
-        "head head body body body body body body"
-        "head head body body body body body body"
-        "head head body body body body body body"
-        "head head foot foot foot foot foot foot";
-    }
-
-    #main-desktop-profile{
-        display: grid;
-    }
-    #main-mobile-profile{
-        display: none;
-    }
-
-    .div-main{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: 10vh 80vh;
-        grid-template-areas: "mainNav" "mainPerfil";
-        background-color: var(--azul);
-        row-gap: 14px;
-        padding: 0;
-
-    }
-
-    .perfil_container{
-        grid-area: mainPerfil;
-        font-family: var(--fuente-juego);
-    }
-
-    .foto_perfil{
-        grid-column: 1/5;
-        grid-row: 1/5;
-    }
-    .info_perfil{
-        grid-column: 5/8;
-        grid-row: 1/6;
-    }
-    .botones_perfil{
-        grid-column: 1/8;
-        grid-row: 6/8;
-    }
-
-    .main_nav{
-        grid-area: mainNav;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 5fr 1fr 1fr;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--naranja);
-        border-radius: 0.4rem;
-        padding: 0rem 1rem;
-
-    }
+    @media(min-width:1000px){
+        #main-desktop-profile{
+            display: grid;
+        }
+        #main-mobile-profile{
+            display: none;
+        }
+        .div-main{
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 10vh 80vh;
+            grid-template-areas: "mainNav" "mainPerfil";
+            background-color: var(--azul);
+            row-gap: 14px;
+            padding: 0;
+        }
     
-    .button{
-        width: 140px;
-        height: 50px;
-        background-color: aliceblue;
-        text-align: center;
-        padding: 15px 0px;
-        font-size: 14px;
-        font-family: var(--fuente-juego);
-        color: var(--naranja)
-    }
-    .btn-actualizar:hover{
-        background-color: var(--azul);
-        border: 2px solid #fff;
-        color:#fff;
-        transition: 1s;
-    }
+        .main_nav{
+            grid-area: mainNav;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 5fr 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--naranja);
+            border-radius: 0.4rem;
+            padding: 0rem 1rem;
     
-    .btn-eliminar{
-        background-color: #fc2a2a;
-        color:white;
-        transition: 1s;
-    }
-    
-    .btn-eliminar:hover{
-        background-color: var(--azul);
-        border: 2px solid #fc2a2a;
-        color:#fc2a2a;
-        transition: 1s;
-    }
-
-    .link_menu_uno{
-        display: none;
-    }
-    .nav__button{
-        display: none;
-    }
-
-    .inicio_menu{
-        display: block;
-        list-style: none;
-        font-size: 24px;
-        font-weight: 100;
-        padding:0;
-    }
-
-
-    
-    .div-header{
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        background-color: var(--footer-azul);
-    }
-
-
-    .titulo{
-        display: none;
-    }
-
-    .nav_title{
-        color:var(--naranja);
-    }
-
-    .nav{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: 20vh 94vh;
-        grid-template-areas: "navone" 
-            "navtwo";
-        color:var(--naranja);
-        row-gap: 14px;
-    }
-
-    .nav_inicio{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        grid-area: navone;
-        border-radius: 10px;
-        padding: 4px 10px;
-        background-color: var(--azul);
-    }
-    .inicio_menu li{
-        margin-top: 10px;
-    }
-    
-    .link_menu_dos{
-        display:flex;
-        flex-direction: column;
-        align-items: start;
-        background-color: var(--azul);
- 
-        padding: 50px 10px;
-        list-style: none;
-        grid-area: navtwo;
-        text-decoration: none;
-        height: 100%;
-        row-gap: 28px;
-        border-radius: 10px;
-    }
-    .link_menu_dos li{
-        border-bottom: var(--azul) solid 2px;
-        color:var(--naranja);
-        transform: var(--estado-menu);
-        transition: 1s;
-        font-size: 1.6rem;
-        border: none;
-        font-weight: 100;
-    }
-    .link_menu_dos li:hover{
-        color:white;
-        transition: 1s;
-        border: none;
-    }
-
-
-
-    .div-main{
-        background-color: var(--azul);
-    }
-    .div-footer{
-        background-color: var(--azul);
-        border-top: var(--naranja) 4px solid;
-    }
-    .footer-div{
-        background-color:  var(--azul);
-        color: whitesmoke;
+        }
         
-    }
-    .footer-div h1{
-        color:var(--naranja);
-    }
-    .footer-info p{
-        background-color: inherit;
-        margin-top: 20px;
-    }
-    .icon{
-        color:var(--naranja);
-        background-color: inherit;
-    }
+        .foto_perfil2{
+            width: 3.8rem;
+            height: 3.8rem;
+            border-radius: 2rem;
+        }
 
-}
+        .perfil_container{
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            grid-template-rows: repeat(6,10vh); 
+            width: 100%;
+            padding: 10px;
+            gap: 10px;
+            grid-area: mainPerfil;
+            align-items: center;
+        }
+
+        .foto_perfil{
+            width:90%;
+            height: 100%;
+        }
+
+    
+        input{
+            height: 40px;
+        }
+
+        .button{
+            width: 140px;
+            height: 50px;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 15px 0px;
+            font-size: 14px;
+            font-family: var(--fuente-juego);
+            color: var(--naranja)
+        }
+        .btn-actualizar:hover{
+            background-color: var(--azul);
+            border: 2px solid #fff;
+            color:#fff;
+            transition: 1s;
+        }
+        
+        .btn-eliminar{
+            background-color: #fc2a2a;
+            color:white;
+            transition: 1s;
+        }
+        
+        .btn-eliminar:hover{
+            background-color: var(--azul);
+            border: 2px solid #fc2a2a;
+            color:#fc2a2a;
+            transition: 1s;
+        }
+    
+        .link_menu_uno{
+            display: none;
+        }
+        .nav__button{
+            display: none;
+        }
+    
+        .inicio_menu{
+            display: block;
+            list-style: none;
+            font-size: 24px;
+            font-weight: 100;
+            padding:0;
+        }
+    
+        .container-grid{
+            display:grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 18vh 40vh 30vh;
+            grid-template-areas: 
+            "head head body body body body body body"
+            "head head body body body body body body"
+            "head head body body body body body body"
+            "head head foot foot foot foot foot foot";
+        }
+        
+        .div-header{
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            background-color: var(--footer-azul);
+        }
+    
+    
+        .titulo{
+            display: none;
+        }
+    
+        .nav_title{
+            color:var(--naranja);
+        }
+    
+        .nav{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 20vh 94vh;
+            grid-template-areas: "navone" 
+                "navtwo";
+            color:var(--naranja);
+            row-gap: 14px;
+        }
+    
+        .nav_inicio{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            grid-area: navone;
+            border-radius: 10px;
+            padding: 4px 10px;
+            background-color: var(--azul);
+        }
+        .inicio_menu li{
+            margin-top: 10px;
+        }
+        
+        .link_menu_dos{
+            display:flex;
+            flex-direction: column;
+            align-items: start;
+            background-color: var(--azul);
+     
+            padding: 50px 10px;
+            list-style: none;
+            grid-area: navtwo;
+            text-decoration: none;
+            height: 100%;
+            row-gap: 28px;
+            border-radius: 10px;
+        }
+        .link_menu_dos li{
+            border-bottom: var(--azul) solid 2px;
+            color:var(--naranja);
+            transform: var(--estado-menu);
+            transition: 1s;
+            font-size: 1.6rem;
+            border: none;
+            font-weight: 100;
+        }
+        .link_menu_dos li:hover{
+            color:white;
+            transition: 1s;
+            border: none;
+        }
+    
+    
+    
+        .div-main{
+            background-color: var(--azul);
+        }
+        .div-footer{
+            background-color: var(--azul);
+            border-top: var(--naranja) 4px solid;
+        }
+        .footer-div{
+            background-color:  var(--azul);
+            color: whitesmoke;
+            
+        }
+        .footer-div h1{
+            color:var(--naranja);
+        }
+        .footer-info p{
+            background-color: inherit;
+            margin-top: 20px;
+        }
+        .icon{
+            color:var(--naranja);
+            background-color: inherit;
+        }
+    
+    }
